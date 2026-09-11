@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ticketing-system-deployment
+  labels:
+    app: ticketing-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ticketing-system
+  template:
+    metadata:
+      labels:
+        app: ticketing-system
+    spec:
+      containers:
+      - name: ticketing-system
+        image: ticketing-system:v1 # அல்லது உங்கள் Docker Hub/Registry image name
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+---
+
+
+
+            
