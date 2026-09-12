@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ticketing-system
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: ticketing-system
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ticketing-system
-        image: rvp0110/ticketing-system:v67
+        image: rvp0110/ticketing-system:v2
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
