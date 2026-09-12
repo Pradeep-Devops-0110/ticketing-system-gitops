@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ticketing-system
-        image: rvp0110/ticketing-system:v2
+        image: rvp0110/ticketing-system:v3
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
